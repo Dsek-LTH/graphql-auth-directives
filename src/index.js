@@ -84,7 +84,9 @@ export class HasRoleDirective extends SchemaDirectiveVisitor {
       locations: [DirectiveLocation.FIELD_DEFINITION, DirectiveLocation.OBJECT],
       args: {
         roles: {
-          type: new GraphQLList(schema.getType("Role")),
+          type: new GraphQLList(
+            schema.getType(process.env.AUTH_DIRECTIVES_ROLE_TYPE || "Role")
+          ),
           defaultValue: "reader"
         }
       }
