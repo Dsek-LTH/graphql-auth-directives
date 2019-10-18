@@ -1,6 +1,6 @@
 {
-  "name": "graphql-auth-directives",
-  "version": "2.0.0",
+  "name": "@dsek/graphql-auth-directives-unsigned",
+  "version": "2.0.5",
   "description": "Add authorization to your GraphQL API using schema directives.",
   "main": "./dist/index.js",
   "scripts": {
@@ -9,12 +9,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src --presets babel-preset-env --out-dir dist",
     "precommit": "lint-staged",
-    "prepublish": "npm run build",
+    "prepack": "npm run build",
     "pretest": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grand-stack/graphql-auth-directives.git"
+    "url": "git+https://github.com/Dsek-LTH/graphql-auth-directives.git"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -34,14 +34,13 @@
   "keywords": [
     "GraphQL",
     "authorization",
-    "neo4j"
+    "neo4j",
+    "dsek",
+    "LTH",
+    "Lund"
   ],
-  "author": "William Lyon",
+  "author": "Datatekniksektionen vid TLTH",
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/grand-stack/graphql-auth-directives/issues"
-  },
-  "homepage": "https://github.com/grand-stack/graphql-auth-directives#readme",
   "lint-staged": {
     "*.{js,json,css}": [
       "prettier --write",
@@ -50,8 +49,8 @@
   },
   "dependencies": {
     "apollo-errors": "^1.9.0",
-    "graphql-tools": "^4.0.4",
-    "jsonwebtoken": "^8.3.0"
+    "graphql": "^14.5.8",
+    "graphql-tools": "^4.0.4"
   },
   "peerDependencies": {
     "graphql": "~14.x"

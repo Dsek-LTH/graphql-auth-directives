@@ -103,7 +103,8 @@ const schema = makeExecutableSchema({
 const server = new ApolloServer({
   schema,
   context: ({ req }) => {
-    return req;
+    const user = req.headers.user && JSON.parse(req.headers.user);
+    return { user };
   }
 });
 
